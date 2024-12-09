@@ -1,0 +1,19 @@
+// Exercise 1 and 5
+@import "_variables.scss";
+
+// Exercise 3
+@mixin border-radius {
+    border-radius: 50%;
+    width: 50px;
+    background-color: $secondary_color;
+    border: 10px solid $secondary_color;
+}
+
+// Exercise 4
+.text-style {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    // EXTRA
+    justify-self: start;
+}

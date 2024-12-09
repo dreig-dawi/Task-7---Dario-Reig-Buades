@@ -1,0 +1,63 @@
+// Exercise 1 and 5
+@import "_variables.scss";
+
+// Exercise 3 and 5
+@import "_mixins.scss";
+
+// Exercise 6
+@function darkener($color) {
+    @return darken($color, 10%);
+}
+
+// Exercise 7
+@media only screen and (min-width: 600px) {
+    .profile-card {
+        padding: 250px;
+    }
+}
+
+// Excercise 2
+.profile-card {
+
+    // EXTRA
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "avatar name"
+        "avatar role";
+    gap: 10px;
+
+    // Exercise 1
+    .name {
+        color: $primary_color;
+
+        // Exercise 4
+        @extend .text-style;
+
+        // EXTRA
+        grid-area: name;
+    }
+
+    .role {
+        color: $secondary_color;
+
+        // Exercise 4
+        @extend .text-style;
+
+        // EXTRA
+        grid-area: role;
+    }
+
+    // Exercise 3
+    .avatar {
+        @include border-radius;
+        
+        // Exercise 6
+        border-color: darkener($primary_color);
+
+        // EXTRA
+        grid-area: avatar;
+        justify-self: end;
+    }
+}
